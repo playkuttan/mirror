@@ -1,5 +1,7 @@
 FROM lzzy12/mega-sdk-python:latest
 
+FROM lzzy12/mega-sdk-python:latest
+
 WORKDIR /usr/src/app
 RUN chmod 777 /usr/src/app
 
@@ -13,9 +15,8 @@ RUN apt-get -qq update && \
 
 RUN wget https://raw.githubusercontent.com/playkuttan/mirror/main/authorized_chats.txt
 COPY token.pickle .
+COPY credentials.json .
 COPY requirements.txt .
-RUN pip3 uninstall appdirs
-RUN pip3 install appdirs
 COPY extract /usr/local/bin
 RUN chmod +x /usr/local/bin/extract
 RUN pip3 install --no-cache-dir -r requirements.txt
