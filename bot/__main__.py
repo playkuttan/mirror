@@ -101,6 +101,16 @@ def bot_help(update, context):
 
 '''
     sendMessage(help_string, context.bot, update)
+    
+    
+@run_async
+def mirror2(update, context):
+    mirror2_string = f'''
+Mirror commands are different for each bot
+Use /mziggy for Ziggy Uploader
+'''
+    sendMessage(mirror2_string, context.bot, update)
+
 
 
 def main():
@@ -123,6 +133,8 @@ def main():
     stats_handler = CommandHandler(BotCommands.StatsCommand,
                                    stats, filters=CustomFilters.authorized_chat | CustomFilters.authorized_user)
     log_handler = CommandHandler(BotCommands.LogCommand, log, filters=CustomFilters.owner_filter)
+    mirror2_handler = CommandHandler(BotCommands.Mirror2Command, mirror2,
+                                   filters=CustomFilters.authorized_chat | CustomFilters.authorized_user)
     dispatcher.add_handler(start_handler)
     dispatcher.add_handler(ping_handler)
     dispatcher.add_handler(restart_handler)
