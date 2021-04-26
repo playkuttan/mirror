@@ -97,7 +97,7 @@ def get_readable_message():
             if download.status() != MirrorStatus.STATUS_ARCHIVING and download.status() != MirrorStatus.STATUS_EXTRACTING:
                 msg += f"\n\n<code>{get_progress_bar_string(download)} {download.progress()}</code>" \
                        f"\n\n<b>╭ Downloaded :</b> {get_readable_file_size(download.processed_bytes())} of {download.size()}" \
-                       f"\n<b>│\n├ Speed :</b> {download.speed()}, \n<b>│\n├ETA:</b> {download.eta()} "
+                       f"\n<b>│\n├ Speed :</b> {download.speed()}, \n<b>│\n├ ETA:</b> {download.eta()} "
                 # if hasattr(download, 'is_torrent'):
                 try:
                     msg += f"\n<b>│\n├ Info :- Seeders:</b> {download.aria_download().num_seeders}" \
@@ -106,7 +106,7 @@ def get_readable_message():
                     pass
             if download.status() == MirrorStatus.STATUS_DOWNLOADING:
                 msg += f"\n<b>│\n├ GID</b>: <code>{download.gid()}</code>"
-            msg += "\n│\n╰ <b>⚡ ZIGGY MIRROR ⚡</b> "
+            msg += "\n│\n╰ <b>⚡ ZIGGY MIRROR BOT ⚡</b> "
         return msg
 
 
