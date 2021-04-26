@@ -106,7 +106,7 @@ def get_readable_message():
                     pass
             if download.status() == MirrorStatus.STATUS_DOWNLOADING:
                 msg += f"\n<b>│\n├ GID</b>: <code>{download.gid()}</code>"
-            msg += "\n│\n╰ <b>⚡ ZIGGY MIRROR BOT ⚡</b> "
+            msg += "<b>\n│\n╰ ⚡ ZIGGY MIRROR BOT ⚡\n</b> "
         return msg
 
 
