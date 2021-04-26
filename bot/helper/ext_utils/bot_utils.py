@@ -90,9 +90,9 @@ def get_progress_bar_string(status):
 
 def get_readable_message():
     with download_dict_lock:
-        msg = "<b>✥════ Ziggy Mirror ════✥</b>"
+        msg = "<b>✥══ Fubuki Mirror Group ══✥</b>"
         for download in list(download_dict.values()):
-            msg += f"\n<b>📁 Filename :</b> <code>{download.name()}</code>"
+            msg += f"\n\n<b>📁 Filename :</b> <code>{download.name()}</code>"
             msg += f"\n\n<b>Status :</b> <i>{download.status()}</i>"
             if download.status() != MirrorStatus.STATUS_ARCHIVING and download.status() != MirrorStatus.STATUS_EXTRACTING:
                 msg += f"\n\n<code>{get_progress_bar_string(download)} {download.progress()}</code>" \
@@ -105,8 +105,8 @@ def get_readable_message():
                 except:
                     pass
             if download.status() == MirrorStatus.STATUS_DOWNLOADING:
-                msg += f"\n<b>│\n╰ GID</b>: <code>{download.gid()}</code>"
-            msg += "\n\n"
+                msg += f"\n<b>│\n├ GID</b>: <code>{download.gid()}</code>"
+            msg += "\n│\n╰ <b>⚡ ZIGGY MIRROR ⚡</b> "
         return msg
 
 
