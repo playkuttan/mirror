@@ -88,7 +88,7 @@ def get_progress_bar_string(status):
     return p_str
 
 
-def get_readable_message(self):
+def get_readable_message():
     with download_dict_lock:
         msg = "<b>✥══ Bla Bla Blaaa ══✥</b>"
         for download in list(download_dict.values()):
@@ -107,10 +107,10 @@ def get_readable_message(self):
             if download.status() == MirrorStatus.STATUS_DOWNLOADING:
                 msg += f"\n<b>│\n├ GID</b>: <code>{download.gid()}</code>"
  #           msg += "<b>\n│\n╰ ⚡ ZIGGY MIRROR BOT ⚡\n</b> "
-            if self.message.from_user.username:
-                uname = f"@{self.message.from_user.username}"
+            if message.from_user.username:
+                uname = f"@{message.from_user.username}"
             else:
-                uname = f'<a href="tg://user?id={self.message.from_user.id}">{self.message.from_user.first_name}</a>'
+                uname = f'<a href="tg://user?id={message.from_user.id}">{message.from_user.first_name}</a>'
             if uname is not None:
                 msg += f'\n\nReq By {uname}'
         return msg
