@@ -90,7 +90,7 @@ def get_progress_bar_string(status):
 
 def get_readable_message():
     with download_dict_lock:
-        msg = "<b>✥══ Fubuki Mirror Group ══✥</b>"
+        msg = "<b>✥══ Bla Bla Blaaa ══✥</b>"
         for download in list(download_dict.values()):
             msg += f"\n\n<b>📁 Filename :</b> <code>{download.name()}</code>"
             msg += f"\n\n<b>Status :</b> <i>{download.status()}</i>"
