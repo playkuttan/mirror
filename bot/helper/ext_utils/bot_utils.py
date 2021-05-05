@@ -88,7 +88,7 @@ def get_progress_bar_string(status):
     return p_str
 
 
-def get_readable_message():
+def get_readable_message(self):
     with download_dict_lock:
         msg = "<b>✥══ Bla Bla Blaaa ══✥</b>"
         for download in list(download_dict.values()):
