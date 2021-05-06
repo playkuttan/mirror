@@ -21,7 +21,7 @@ def cloneNode(update,context):
         else:
             sendMarkup(result,context.bot,update,button)
     else:
-        sendMessage("<b>Provide G-Drive Shareable Link to Clone Bloody Phool😡🤬</b>",context.bot,update)
+        sendMessage("<b>Provide G-Drive Shareable Link to Clone Bludy Pool😡🤬</b>",context.bot,update)
 
 clone_handler = CommandHandler(BotCommands.CloneCommand,cloneNode,filters=CustomFilters.authorized_chat | CustomFilters.authorized_user)
 dispatcher.add_handler(clone_handler)
