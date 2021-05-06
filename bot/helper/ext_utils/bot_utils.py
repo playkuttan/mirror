@@ -106,13 +106,7 @@ def get_readable_message():
                     pass
             if download.status() == MirrorStatus.STATUS_DOWNLOADING:
                 msg += f"\n<b>│\n├ GID</b>: <code>{download.gid()}</code>"
- #           msg += "<b>\n│\n╰ ⚡ ZIGGY MIRROR BOT ⚡\n</b> "
-            if message.from_user.username:
-                uname = f"@{message.from_user.username}"
-            else:
-                uname = f'<a href="tg://user?id={message.from_user.id}">{message.from_user.first_name}</a>'
-            if uname is not None:
-                msg += f'\n\nReq By {uname}'
+           msg += "<b>\n│\n╰ ⚡ ZIGGY MIRROR BOT ⚡\n</b> "
         return msg
 
 
