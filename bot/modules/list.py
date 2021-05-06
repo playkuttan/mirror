@@ -17,10 +17,10 @@ def list_drive(update,context):
         if button:
             editMessage(msg, reply, button)
         else:
-            editMessage('No result found', reply, button)
+            editMessage('No result found 🥲', reply, button)
 
     except IndexError:
-        sendMessage('send a search key along with command', context.bot, update)
+        sendMessage('Send a search key along with command 😡', context.bot, update)
 
 
 list_handler = CommandHandler(BotCommands.ListCommand, list_drive,filters=CustomFilters.authorized_chat | CustomFilters.authorized_user)
